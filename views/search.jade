@@ -1,0 +1,29 @@
+div#search-container
+  form#searchForm(action='/search/#{login}', method='get', accept-charset='utf-8')
+    span.refresh
+      a(href="/refresh/#{login}") Refresh
+    label(for='queryField') Search watched repos of #{login}
+    input.clear.searchBox(type="text", id='queryField', name="query", value="#{query}")
+    input.submitButton.inact(type="submit", name="submit", value="Search &rarr;")
+    span.latest
+      strong Last indexed on:
+        span#last-indexed-on  #{last_refresh_at}
+    div.clear
+
+  h3.results-for Results for #{query}
+  ol.results
+    - each doc in docs
+      - var fields = doc.fields
+      li.result
+        a(href='https://github.com/#{fields.owner_login}')
+          img.avatar(src="#{fields.owner_avatar_url}", width="64", height="64", alt="#{fields.owner_login}'s avatar")
+        div.describe
+          strong
+            a.username(href='https://github.com/#{fields.owner_login}') #{fields.owner_login}
+            /
+          strong
+            a.reponame(href='#{fields.html_url}') #{fields.name}
+          div.description
+            #{fields.description}
+          div.language #{fields.language}
+          div.clear

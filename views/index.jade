@@ -1,0 +1,8 @@
+#search-container
+  h1
+    Search your github watched repositories
+
+  form(action='/search/', method='get', accept-charset='utf-8')
+    label(for='login')Github username/login
+    input(type="text", id="login", name="login", class="searchBox clear")
+    input(type="submit", id="import", value="Get Started &rarr;", class="cta inact")

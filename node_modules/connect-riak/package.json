@@ -1,0 +1,10 @@
+{
+  "name": "connect-riak",
+  "description": "Riak Session Store for Connect",
+  "version": "0.1.0",
+  "author": "Sean Cribbs <sean@basho.com>; Francisco Treacy <francisco.treacy@gmail.com>",
+  "main": "./index.js",
+  "dependencies": { "riak-js": ">= 0.4.0" },
+  "devDependencies": { "connect": "1.4.x" },
+  "engines": { "node": ">= 0.4.0" }
+}

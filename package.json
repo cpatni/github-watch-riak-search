@@ -1,0 +1,12 @@
+{
+    "name": "github-watch-riak-search"
+  , "version": "0.1.0"
+  , "private": false
+  , "dependencies": {
+      "express": "2.3.12"
+    , "jade": ">= 0.15.2"
+    , "coffee-script": ">= 1.1.2"
+    , "riak-js": ">= 0.4.0"
+    , "connect-riak": ">= 0.1.0"
+  }
+}
